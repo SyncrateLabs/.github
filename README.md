@@ -22,8 +22,11 @@ Syncrate provides an infrastructure layer that aggregates multiple RWA issuers, 
 # Repository Structure
 
 /core        — Routing engine (TypeScript)
+
 /adapters    — Solidity adapter interfaces & examples
+
 /contracts   — Adapter deployments (testnets)
+
 /docs        — API specifications & architecture
 
 # 📄 License
