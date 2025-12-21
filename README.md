@@ -1,7 +1,7 @@
 # Syncrate
 
 **A decentralized routing layer for tokenized Real-World Assets.**
-Syncrate provides an infrastructure layer that aggregates multiple RWA issuers, settlement venues, and liquidity providers, enabling developers and to route assets across chains and protocols through a unified interface.
+Syncrate provides an infrastructure layer that enables assets issers and investors to move capital across different chains and assets classes without breaking compliance and security.  
 
 > # 🚧 Status
 > 
@@ -11,23 +11,14 @@ Syncrate provides an infrastructure layer that aggregates multiple RWA issuers, 
 
 # What Syncrate Does
 
-- Computes optimal routes between tokenized RWA assets
+- Checks the user's KYC and allowlist status of the source and destination assets based on individual issuer attestations and KYC check mechanism.
 
-- Standardizes communication with RWA issuers through adapters
+- Redeems the source asset at the issuers redemption gateway (the users gets USDC or other stable-settlment token depending on the issuer's structure)
 
-- Exposes simple APIs for developers (quote, route, execute)
+- Bridges the USDC via Circle's CCTP
 
-- Enables cross-venue RWA settlement through unified execution payloads
+- Sends a mint/issuance request to the destination asset's issuer. The destination asset is then minted to the user's wallet - no wrapped tokens, no synthetic pools. 
 
-# Repository Structure
-
-/core        — Routing engine (TypeScript)
-
-/adapters    — Solidity adapter interfaces & examples
-
-/contracts   — Adapter deployments (testnets)
-
-/docs        — API specifications & architecture
 
 # 📄 License
 
